@@ -17,11 +17,19 @@ The final price output is put out in human form (with up to two decimals, to ind
  - Nested if to choose the discount on the price (if the age allows it)
  - Transform the calculated price into human format
  - Save the variables values into html elements
+ --------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------   Bonus   --------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+ - Ask name of passenger
+ - Ask surname of passenger
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 */
 const priceForKilometer = 0.21;// Price in euro
+//Ask user to insert basic passenger info
+let nameOfPassenger = prompt("Qual è il tuo nome?");
+let surnameOfPassenger = prompt("Qual è il tuo cognome?");
 //Ask user to insert basic variables values
 let numberOfKilometres = prompt("Quanti chilometri devi percorrere?");
 let ageOfPassenger = prompt("Quanti anni hai?");
@@ -42,6 +50,8 @@ console.log("Age: " + ageOfPassenger);
 console.log("Price: " + price + "€");
 console.log("------------------------------");
 //Save variables values into input elements fields
+document.getElementById("inputName").value = nameOfPassenger;
+document.getElementById("inputSurname").value = surnameOfPassenger;
 document.getElementById("inputAge").value = ageOfPassenger;
 document.getElementById("inputKilometres").value = numberOfKilometres;
 document.getElementById("inputPrice").value = price;
