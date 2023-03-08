@@ -21,5 +21,6 @@ The final price output is put out in human form (with up to two decimals, to ind
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 */
+const priceForKilometer = 0.21;// Price in euro
  let numberOfKilometres = prompt("Quanti chilometri devi percorrere?");
  let ageOfPassenger = prompt("Quanti anni hai?");
