@@ -17,7 +17,7 @@ The final price output is put out in human form (with up to two decimals, to ind
  - Nested if to choose the discount on the price (if the age allows it)
  - Transform the calculated price into human format
  - Save the variables values into html elements
- --------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------   Bonus   --------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
  - Ask name of passenger
@@ -29,6 +29,12 @@ The final price output is put out in human form (with up to two decimals, to ind
 ---------------------------------------------------------------------------------------------------------------------------
 */
 
+
+/*
+--------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------   Functions   ------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
 /**
  * Function that ask a passed question to the user unless the value inserted is ok.
  * @param {string} question Question to be asked in the prompt to the user.
@@ -77,6 +83,12 @@ function CalculatePrice(numKm, priceKm, age){
   return price;
 }
 
+
+/*
+--------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------   Main program   ----------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+*/
 /** Price for each kilometer to be traveled */
 const priceForKilometer = 0.21;
 //Ask user to insert basic passenger info
@@ -98,6 +110,7 @@ console.log("Kilometers to be traveled: " + numberOfKilometres);
 console.log("Age: " + ageOfPassenger);
 console.log("Price: " + price + "€");
 console.log("------------------------------");
+
 //Save variables values into input elements fields
 document.getElementById("inputName").value = nameOfPassenger;
 document.getElementById("inputSurname").value = surnameOfPassenger;
