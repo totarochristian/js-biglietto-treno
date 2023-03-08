@@ -9,6 +9,15 @@ Based on this information, he will have to calculate the total price of the trip
   - a 40% discount should be applied for over 65s.
 The final price output is put out in human form (with up to two decimals, to indicate cents on the price).
 ---------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------   Program steps   ----------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+ - Ask number of kilometers
+ - Ask age of passenger
+ - Define basic price calculated as num of km * 0.21
+ - Nested if to choose the discount on the price (if the age allows it)
+ - Transform the calculated price into human format
+ - Save the variables values into html elements
+---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 */
