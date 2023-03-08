@@ -55,14 +55,19 @@ function AskAndCheckToUser(question, isNumber){
   return tmp;
 }
 
-const priceForKilometer = 0.21;// Price in euro
+/** Price for each kilometer to be traveled */
+const priceForKilometer = 0.21;
 //Ask user to insert basic passenger info
+/** Name of the passenger */
 let nameOfPassenger = AskAndCheckToUser("Qual è il tuo nome?", false);
+/** Surname of the passenger */
 let surnameOfPassenger = AskAndCheckToUser("Qual è il tuo cognome?", false);
 //Ask user to insert basic variables values
+/** Number of kilometres to be traveled */
 let numberOfKilometres = AskAndCheckToUser("Quanti chilometri devi percorrere?", true);
+/** Age of the passenger */
 let ageOfPassenger = AskAndCheckToUser("Quanti anni hai?", true);
-//Define the basic price
+/** Price to be payed by the passenger to travel the kilometres passed */
 let price = numberOfKilometres * priceForKilometer;
 //If passenger is a child, subtract discount of 20%
 if(ageOfPassenger < 18){
