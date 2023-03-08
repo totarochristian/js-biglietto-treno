@@ -26,3 +26,7 @@ let numberOfKilometres = prompt("Quanti chilometri devi percorrere?");
 let ageOfPassenger = prompt("Quanti anni hai?");
 //Define the basic price
 let price = numberOfKilometres * priceForKilometer;
+//If passenger is a child, subtract discount of 20%
+if(ageOfPassenger < 18){
+    price = price - (price*20)/100;
+}
