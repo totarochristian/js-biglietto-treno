@@ -23,6 +23,7 @@ The final price output is put out in human form (with up to two decimals, to ind
  - Ask name of passenger
  - Ask surname of passenger
  - Add controls to the values inserted by the user
+ - Define functions to reduce the code used in the main part of the code
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
@@ -55,6 +56,27 @@ function AskAndCheckToUser(question, isNumber){
   return tmp;
 }
 
+/**
+ * Function that calculate the price of the ticket
+ * @param {bigint} numKm Number of km to be traveled
+ * @param {bigint} priceKm Price for each km to be traveled
+ * @param {bigint} age Age of the passenger (to define the discount)
+ * @returns {decimal} Price as decimal (2 places)
+ */
+function CalculatePrice(numKm, priceKm, age){
+  //Calculate basic price
+  let price = numKm * priceKm;
+  //If passenger is a child, subtract discount of 20%
+  if(age < 18){
+      price = price - (price*20)/100;
+  }else if(age > 65){//else, if passenger is over 65, subtract discount of 40%
+      price = price - (price*40)/100;
+  }
+  //Set 2 decimal places
+  price = price.toFixed(2);
+  return price;
+}
+
 /** Price for each kilometer to be traveled */
 const priceForKilometer = 0.21;
 //Ask user to insert basic passenger info
@@ -68,15 +90,8 @@ let numberOfKilometres = AskAndCheckToUser("Quanti chilometri devi percorrere?",
 /** Age of the passenger */
 let ageOfPassenger = AskAndCheckToUser("Quanti anni hai?", true);
 /** Price to be payed by the passenger to travel the kilometres passed */
-let price = numberOfKilometres * priceForKilometer;
-//If passenger is a child, subtract discount of 20%
-if(ageOfPassenger < 18){
-    price = price - (price*20)/100;
-}else if(ageOfPassenger > 65){//else, if passenger is over 65, subtract discount of 40%
-    price = price - (price*40)/100;
-}
-//Set 2 decimal places
-price = price.toFixed(2);
+let price = CalculatePrice(numberOfKilometres, priceForKilometer, ageOfPassenger);
+
 //Print result in the console
 console.log("------- Passenger info -------");
 console.log("Kilometers to be traveled: " + numberOfKilometres);
