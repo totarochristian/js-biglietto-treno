@@ -3,7 +3,7 @@ body div{
     height: 100vh;
 }
 #ticket{
-    max-height: 300px;
+    max-height: 400px;
     background-color: #ececec;
 }
 #ticket-header{
