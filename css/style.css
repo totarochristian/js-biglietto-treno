@@ -7,10 +7,13 @@ body div{
     background-color: #ececec;
 }
 #ticket-header{
-    max-height: 30px;
+    max-height: 20%;
     background-color: #12477b;
 }
+#ticket-content{
+    max-height: 70%;
+}
 #ticket-footer{
-    max-height: 30px;
+    max-height: 10%;
     background-color: #d43a30;
 }
