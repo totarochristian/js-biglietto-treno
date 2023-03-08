@@ -5,6 +5,7 @@ body div{
 #ticket{
     max-height: 700px;
     background-color: #ececec;
+    box-shadow: 0 0 20px #888;
 }
 #ticket-header{
     max-height: 20%;
