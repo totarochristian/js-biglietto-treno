@@ -29,4 +29,6 @@ let price = numberOfKilometres * priceForKilometer;
 //If passenger is a child, subtract discount of 20%
 if(ageOfPassenger < 18){
     price = price - (price*20)/100;
+}else if(ageOfPassenger > 65){
+    price = price - (price*40)/100;
 }
