@@ -36,7 +36,8 @@ if(ageOfPassenger < 18){
 //Set 2 decimal places
 price = price.toFixed(2);
 //Print result in the console
-console.log("Passenger info");
+console.log("------- Passenger info -------");
 console.log("Kilometers to be traveled: " + numberOfKilometres);
 console.log("Age: " + ageOfPassenger);
-console.log("Price: " + price);
+console.log("Price: " + price + "€");
+console.log("------------------------------");
