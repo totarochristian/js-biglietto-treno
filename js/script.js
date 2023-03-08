@@ -30,9 +30,9 @@ The final price output is put out in human form (with up to two decimals, to ind
 
 /**
  * Function that ask a passed question to the user unless the value inserted is ok.
- * @param {string} question Question to ask in the prompt to the user.
+ * @param {string} question Question to be asked in the prompt to the user.
  * @param {boolean} isNumber Boolean that tell to the function if it has to wait a number or a string.
- * @returns If isNumber is true, returns a number otherwise a string.
+ * @returns {string | number} If isNumber is true, returns a number otherwise a string.
  */
 function AskAndCheckToUser(question, isNumber){
   let noError = false;
