@@ -32,3 +32,7 @@ if(ageOfPassenger < 18){
 }else if(ageOfPassenger > 65){
     price = price - (price*40)/100;
 }
+console.log("Passenger info");
+console.log("Kilometers to be traveled: " + numberOfKilometres);
+console.log("Age: " + ageOfPassenger);
+console.log("Price: " + price);
