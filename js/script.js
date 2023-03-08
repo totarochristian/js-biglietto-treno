@@ -32,6 +32,8 @@ if(ageOfPassenger < 18){
 }else if(ageOfPassenger > 65){
     price = price - (price*40)/100;
 }
+//Set 2 decimal places
+price = price.toFixed(2);
 console.log("Passenger info");
 console.log("Kilometers to be traveled: " + numberOfKilometres);
 console.log("Age: " + ageOfPassenger);
