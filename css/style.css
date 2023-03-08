@@ -15,7 +15,7 @@ body div{
     width: 100%;
     height: 100%;
 }
-#ticket-info, #ticket-code{
+#ticket-info, #ticket-info>div, #ticket-code{
     height: 100%;
 }
 #ticket-code img{
@@ -26,4 +26,11 @@ body div{
 #ticket-footer{
     max-height: 10%;
     background-color: #d43a30;
+}
+.row div{
+    height: auto;
+}
+.ct-flex-cont{
+    display: flex;
+    flex-wrap: wrap;
 }
