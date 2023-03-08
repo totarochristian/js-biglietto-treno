@@ -3,7 +3,7 @@ body div{
     height: 100vh;
 }
 #ticket{
-    max-height: 400px;
+    max-height: 700px;
     background-color: #ececec;
 }
 #ticket-header{
@@ -33,4 +33,12 @@ body div{
 .ct-flex-cont{
     display: flex;
     flex-wrap: wrap;
+}
+input[type="text"]:disabled, input[type="number"]:disabled{
+    background-color: white;
+}
+@media screen and (min-width: 768px){
+    #ticket{
+        max-height: 400px!important;
+    }
 }
