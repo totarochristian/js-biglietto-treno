@@ -41,3 +41,7 @@ console.log("Kilometers to be traveled: " + numberOfKilometres);
 console.log("Age: " + ageOfPassenger);
 console.log("Price: " + price + "€");
 console.log("------------------------------");
+//Save variables values into input elements fields
+document.getElementById("inputAge").value = ageOfPassenger;
+document.getElementById("inputKilometres").value = numberOfKilometres;
+document.getElementById("inputPrice").value = price;
