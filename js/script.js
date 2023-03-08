@@ -27,13 +27,41 @@ The final price output is put out in human form (with up to two decimals, to ind
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 */
+
+/**
+ * Function that ask a passed question to the user unless the value inserted is ok.
+ * @param {string} question Question to ask in the prompt to the user.
+ * @param {boolean} isNumber Boolean that tell to the function if it has to wait a number or a string.
+ * @returns If isNumber is true, returns a number otherwise a string.
+ */
+function AskAndCheckToUser(question, isNumber){
+  let noError = false;
+  let tmp;
+  //Unless there aren't errors
+  while(!noError){
+    //Ask to the user the question passed
+    tmp = prompt(question);
+    if(!tmp)//If nothing passed, show error
+      alert("Il valore inserito è vuoto o nullo!");
+    else if(isNumber && isNaN(tmp))//If aspect a number but pass a string, show error
+      alert("Il valore inserito deve essere un numero!");
+    else if(isNumber && !isNaN(tmp) && parseInt(tmp)<=0)//If aspect a number but pass a negative number, show error
+      alert("Il valore inserito deve essere più grande di 0!");
+    else if(!isNumber && !isNaN(tmp))//If aspect a string but pass a number, show error
+      alert("Il valore inserito non può essere un numero!");
+    else
+      noError = true;
+  }
+  return tmp;
+}
+
 const priceForKilometer = 0.21;// Price in euro
 //Ask user to insert basic passenger info
-let nameOfPassenger = prompt("Qual è il tuo nome?");
-let surnameOfPassenger = prompt("Qual è il tuo cognome?");
+let nameOfPassenger = AskAndCheckToUser("Qual è il tuo nome?", false);
+let surnameOfPassenger = AskAndCheckToUser("Qual è il tuo cognome?", false);
 //Ask user to insert basic variables values
-let numberOfKilometres = prompt("Quanti chilometri devi percorrere?");
-let ageOfPassenger = prompt("Quanti anni hai?");
+let numberOfKilometres = AskAndCheckToUser("Quanti chilometri devi percorrere?", true);
+let ageOfPassenger = AskAndCheckToUser("Quanti anni hai?", true);
 //Define the basic price
 let price = numberOfKilometres * priceForKilometer;
 //If passenger is a child, subtract discount of 20%
